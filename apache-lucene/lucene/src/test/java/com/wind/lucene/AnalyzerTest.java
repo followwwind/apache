@@ -8,7 +8,8 @@ import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.wltea.analyzer.lucene.IKAnalyzer;
+import org.lionsoul.jcseg.analyzer.JcsegAnalyzer;
+import org.lionsoul.jcseg.tokenizer.core.JcsegTaskConfig;
 
 import java.io.IOException;
 
@@ -66,11 +67,11 @@ public class AnalyzerTest {
     }
 
     /**
-     * 敏感词处理工具 - IKAnalyzer中文分词工具 - 借助分词进行敏感词过滤
+     * Jcseg中文分词工具
      */
     @Test
-    public void testIKAnalyzer(){
-
+    public void testJcseg(){
+        analyzer = new JcsegAnalyzer(JcsegTaskConfig.COMPLEX_MODE);
     }
 
 }

@@ -117,7 +117,6 @@ public class LuceneTest {
             System.out.println("index num:" + ir.numDocs());
             // 删除了的索引数 4.X版本后取消了恢复删除
             System.out.println("delete index num:" + ir.numDeletedDocs());
-
             ir.close();
         } catch (IOException e) {
             e.printStackTrace();
